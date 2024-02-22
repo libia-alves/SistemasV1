@@ -14,9 +14,33 @@
         
         {% block  menu %}
         <div class='bg-primary'>
+        
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cardapio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url "login" %}">login</a>
+                </li>
+                    <!-- Adicione mais itens de menu conforme necessário -->
+                </ul>
+            </div>
+        </nav>
 
-
-            <img src="{% static 'img/Gov_logo.png' %}" width="100">
+            
         </div>
         
         {% endblock  %}
@@ -56,145 +80,57 @@
    <div class="container">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/gol-vw.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/sedan.png'  %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/gol-vw.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class="col-md-4">
+
               <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/sedan.png' %}" width="100">
+                <img src="{% static 'img/bebidas.jpg' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <p class="card-text">Bebidas</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
+                       
+                        </div>
+                        <small class="text-muted">9 mins</small>
                     </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/sedan.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/sedan.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/gol-vw.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+
+            
+            <div class="card mb-4 box-shadow">
+              <img src="{% static 'img/lanhces.avif' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
+              <div class="card-body">
+                  <p class="card-text">Lanches</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
+
+                      </div>
+                      <small class="text-muted">9 mins</small>
                   </div>
-                </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/gol-vw.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/gol-vw.png' %}" width="100">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+
+          <div class="card mb-4 box-shadow">
+            <img src="{% static 'img/pratos.jpeg' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
+            <div class="card-body">
+                <p class="card-text">Pratos</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
+
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+            </div>
         </div>
+
+
+             </div>
+          </div>
       </div>
 
     </main>
@@ -203,8 +139,22 @@
         {% endblock  %}
 
         {% block  rodape %}
-        <div class='bg-dark'>
-            <h1> rodape</h1>
+  
+           
+        <footer class="footer bg-dark text-light">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h5>Contato</h5>
+                      <p>Telefone: (XX) XXXX-XXXX</p>
+                      <p>Email: contato@hamburgueria.com</p>
+                  </div>
+                  <div class="col-md-6 text-right">
+                      <p>&copy; 2024 Hamburgueria. Todos os direitos reservados.</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
         </div>
         
         {% endblock  %}

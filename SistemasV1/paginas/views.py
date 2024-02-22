@@ -1,9 +1,14 @@
 from django.views.generic import TemplateView
+from django.shortcuts import render
 
 
-
-class IndexView(TemplateView):
-    template_name="paginas/index.html"
-    
 
     
+def home(request):
+    return render(request, "paginas/index.html") 
+    
+
+   
+def login(request):
+    return render(request, "paginas/login.html") 
+       

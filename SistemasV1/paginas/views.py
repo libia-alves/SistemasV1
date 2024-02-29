@@ -18,3 +18,6 @@ def cardapio(request):
     
 def perfil(request):
     return render(request, "paginas/perfil")
+
+def pratos(request):
+    return render(request, "paginas/pratos")

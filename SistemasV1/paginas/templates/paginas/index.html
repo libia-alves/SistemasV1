@@ -1,171 +1,299 @@
-
-
 {% load static %}
+
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer Grill</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    </head>
-    <body>
-        
-        {% block  menu %}
-        <div class='bg-primary'>
-        
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-            <a class="navbar-brand" href="#"><img src="{%static 'img/image 22.png'%}" alt="logo" style="max-heigth:40px;"></a>
-            <a class="navbar-brand" href="#">Burguer Grill</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+</head>
+<body>
+    <!-- SECCION INICIO -->
+
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url "index" %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url "cardapio" %}">Cardapio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{%url "perfil" %}">Perfil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url "login" %}">login</a>
-                </li>
-                    <!-- Adicione mais itens de menu conforme necessário -->
-                </ul>
-            </div>
-        </nav>
-
-            
-        </div>
-        
-        {% endblock  %}
-
-
-        {% block  banner %}
-        <div class='bg-danger' >
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'img/banner1food.png' %}" class="d-block w-100 h-30" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/banner2food.png' %}" class="d-block w-100 h-30" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/banner3food' %}" class="d-block w-100 h-30" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>        </div>
-        
-        {% endblock  %}
-
-        {% block  main %}
-
-        <br> <br> 
-        <div class='container'>
-
-   <div class="container">
-
-          <div class="row">
-
-            <div class="col-md-4">
-
-              <div class="card mb-4 box-shadow">
-                <img src="{% static 'img/bebidas.jpg' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
-                <div class="card-body">
-                    <p class="card-text">Bebidas</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
-                       
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                    </div>
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+                <div class="logo">
+                    <h1>Burguer Grill</h1>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="{% url 'index' %}">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cardapio' %}" onclick="seleccionar()">
+                                <i class="fa-solid fa-ice-cream"></i>
+                                <span>Cardapio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pratos'%}" onclick="seleccionar()">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Pratos</span>
+                            </a></li>
+                        <li>
+                            <a href="{% url 'perfil'%}" onclick="seleccionar()">
+                                <i class="fa-solid fa-pen"></i>
+                                <span>Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'login'%}" onclick="seleccionar()">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="tel:+1123-456-7890">
+                        <i class="fa-solid fa-phone"></i>+1123-456-7890
+                    </a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                </div>
+                <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
+        </header>
+
+
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": false, "autoPlay": true}'>
+                <div class="gallery-cell" >
+                    <img src="{% static 'img/1.jpg' %}" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="{% static 'img/2.jpg' %}" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="{% static 'img/3.jpg' %}" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="{% static 'img/4.jpg' %}" alt="">
+                </div>
+             
+            </div>
+            <div class="info">
+                <h2>A hamburguerua mais completa pra te atender </h2>
+                <p> Melhores opções de lanhces, pretos, bebidas e doces</p>
+                <button>Ler Mais</button>
+            </div>
+        </div>
+
+    </section>
 
 
 
-            
-            <div class="card mb-4 box-shadow">
-              <img src="{% static 'img/lanhces.avif' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
-              <div class="card-body">
-                  <p class="card-text">Lanches</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
+   
 
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card mb-4 box-shadow">
-            <img src="{% static 'img/pratos.jpeg' %}" class="card-img-top mx-auto d-block" alt="Bebidas">
-            <div class="card-body">
-                <p class="card-text">Pratos</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Entrar</button>
-
-                    </div>
-                    <small class="text-muted">9 mins</small>
+    <!-- SECCION SABORES -->
+    <section id="sabores">
+        <h2>Sabores</h2>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor1.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Saladas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor2.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Doces</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor3.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Hamburguers, nossa especialidade da casa</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
 
-
-             </div>
-          </div>
-      </div>
-
-    </main>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor4.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Sorvetes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor5.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Macarrões</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="{% static "img/sabor6.png" %}" alt="">
+                </div>
+                <div class="info">
+                    <h3>Biscoitos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
         </div>
-        
-        {% endblock  %}
 
-        {% block  rodape %}
+        <button>Ver Más</button>
+
+    </section>
+
   
-           
-        <footer class="footer bg-dark text-light">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-6">
-                      <h5>Contato</h5>
-                      <p>Telefone: (XX) XXXX-XXXX</p>
-                      <p>Email: contato@hamburgueria.com</p>
-                  </div>
-                  <div class="col-md-6 text-right">
-                      <p>&copy; 2024 Hamburgueria. Todos os direitos reservados.</p>
-                  </div>
-              </div>
-          </div>
-      </footer>
+
+    <!-- SECCION PLATOS -->
+    <section id="platos">
+        <h2>Pratos</h2>
+
+        <div class="fila">
+            <div class="item">
+                <img src="{% static "img/plato1.jpg" %} " alt="">
+                <p>Chiles Y Alitas De Pollo Frito En Un Plato</p>
+            </div>
+            <div class="item">
+                <img src="{% static "img/plato2.jpg" %}" alt="">
+                <p>Plato De Ensalada De Pescado</p>
+            </div>
+            <div class="item">
+                <img src="{% static "img/plato3.jpg" %}" alt="">
+                <p>Plato De Carne Asada Servido En Plato Blanco</p>
+            </div>
         </div>
-        
-        {% endblock  %}
+        <div class="fila">
+            <div class="item">
+                <img src="{% static "img/plato4.jpg" %}" alt="">
+                <p>Plato de Bife a la Plancha con Papas Fritas</p>
+            </div>
+            <div class="item">
+                <img src="{% static "img/plato5.jpg" %}" alt="">
+                <p>Plato de Pizza con Rúcula</p>
+            </div>
+            <div class="item">
+                <img src="{% static "img/plato6.jpg" %}" alt="">
+                <p>Plato de Pastas con Tuco</p>
+            </div>
+        </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <button>Ver Mais</button>
 
-    </body>
+    </section>
+
+   
+
+
+    <!-- SECCION BLOG -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="galeria-blog js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": true}'>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="{% static "img/cheff1.jpg" %}" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>El arte de cocinar</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="{% static "img/cheff2.jpg" %}" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>¿Donde estudiar cocina?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores culpa minus corporis neque hic sunt dolore.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="{% static "img/cheff3.jpg" %}" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>La cocina del 2023</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, repudiandae est maxime quam alias asperiores culpa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>Leer Más</button>
+    </section>
+
+
+
+  
+    <!-- SECCION CONTACTO Y PIE DE PAGINA -->
+    <section id="contacto">
+        <div class="fila">
+            <div class="col">
+                <h1>Burguer Grill</h1>
+            </div>
+            <div class="col">
+                <h3>Menu</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#sabores">Sabores</a>
+                <a href="#sabores">Platos</a>
+                <a href="#sabores">Blog</a>
+            </div>
+            <div class="col">
+                <h3>Cheffs</h3>
+                <a href="#">Marcos G.</a>
+                <a href="#">María L.</a>
+                <a href="#">Marta J.</a>
+            </div>
+            <div class="col">
+                <h3>Social Media</h3>
+                <div class="media">
+                    <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
+                </div>
+                <div class="media">
+                    <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Contacto</h3>
+                <input type="text" placeholder="Tu correo">
+                <input type="submit" class="enviar">
+            </div>
+        </div>
+
+    </section>
+
+
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

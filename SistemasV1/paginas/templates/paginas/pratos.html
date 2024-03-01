@@ -1,22 +1,45 @@
-{% extends 'paginas/index.html' %}
-
-{%block titulo%}
-<h1> sobre o projeto</h1>
-{% endblock%}
-
-{% block banner  %}
-<h1> banner </h1>
-
-{% endblock  %}
+{% extends 'paginas/teste.html' %}
 
 
-
-{% block container  %}
-
-{% endblock  %}
+{% load static%}
 
 
-{% block footer  %}
+{% block content %} 
 
+<section id="platos">
+    <h2>Pratos</h2>
 
-{% endblock  %}
+    <div class="fila">
+        <div class="item">
+            <img src="{% static "img/plato1.jpg" %} " alt="">
+            <p>Chiles Y Alitas De Pollo Frito En Un Plato</p>
+        </div>
+        <div class="item">
+            <img src="{% static "img/plato2.jpg" %}" alt="">
+            <p>Plato De Ensalada De Pescado</p>
+        </div>
+        <div class="item">
+            <img src="{% static "img/plato3.jpg" %}" alt="">
+            <p>Plato De Carne Asada Servido En Plato Blanco</p>
+        </div>
+    </div>
+    <div class="fila">
+        <div class="item">
+            <img src="{% static "img/plato4.jpg" %}" alt="">
+            <p>Plato de Bife a la Plancha con Papas Fritas</p>
+        </div>
+        <div class="item">
+            <img src="{% static "img/plato5.jpg" %}" alt="">
+            <p>Plato de Pizza con Rúcula</p>
+        </div>
+        <div class="item">
+            <img src="{% static "img/plato6.jpg" %}" alt="">
+            <p>Plato de Pastas con Tuco</p>
+        </div>
+    </div>
+
+    <button>Ver Mais</button>
+
+</section>
+
+ {%endblock%}

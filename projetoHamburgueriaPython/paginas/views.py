@@ -22,6 +22,9 @@ def perfil(request):
 def pratos(request):
     return render(request, "paginas/pratos.html")
 
+def carrinho(request):
+    return render(request, "paginas/carrinho.html")
+
 
 
 

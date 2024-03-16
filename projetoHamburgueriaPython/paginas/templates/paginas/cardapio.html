@@ -10,21 +10,15 @@
     <section id="sabores">
         <h2>Sabores</h2>
         <div class="fila">
+           
+           
+       
             <div class="item">
                 <div class="icono">
-                    <img src="{% static "img/sabor1.png" %}" alt="">
+                    <img src="{% static "img/bebidasfofinhas.jpg" %}" alt="">
                 </div>
                 <div class="info">
-                    <h3>Saladas</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor2.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Doces</h3>
+                    <h3>Bebidas</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
@@ -40,33 +34,28 @@
         </div>
 
         <div class="fila">
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor4.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Sorvetes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
+            
+           
             <div class="item">
                 <div class="icono">
                     <img src="{% static "img/sabor5.png" %}" alt="">
                 </div>
                 <div class="info">
-                    <h3>Macarrões</h3>
+                    <h3><a href="{% url 'pratos'%}" onclick="seleccionar()">Pratos </a></h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
+
             <div class="item">
                 <div class="icono">
-                    <img src="{% static "img/sabor6.png" %}" alt="">
+                    <img src="{% static "img/sabor4.png" %}" alt="">
                 </div>
                 <div class="info">
-                    <h3>Biscoitos</h3>
+                    <h3>Sorvetes e Doces</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
+           
         </div>
 
         <button>Ver Más</button>

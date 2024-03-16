@@ -1,13 +1,13 @@
 from django.urls import path
-from .views import  PratosCreate
-from .views import PratosUpdate, PratosDelete
-from .views import CampoListView
+from .views import  ProdutoCreate
+from .views import ProdutoUpdate, ProdutoDelete
+from .views import ProdutoListView
 
 
 
 urlpatterns = [
   
-    path('cadastrar/pratos/',PratosCreate.as_view(),name="cadastrar-pratos"),
+    path('cadastrar/produto/',ProdutoCreate.as_view(),name="cadastrar-produto"),
     
  #   path('cadastrar/atividade/',AtividadeCreate.as_view(),name="cadastrar-atividade"),
 
@@ -15,14 +15,14 @@ urlpatterns = [
     
     
      #=== UPDATE 
-    path('editar/pratos/<int:pk>/',PratosUpdate.as_view(),name="editar-pratos"), 
-   # path('editar/pratos/<int:pk>/',AtividadeUpdate.as_view(),name="editar-pratos"), 
+    path('editar/Produto/<int:pk>/',ProdutoUpdate.as_view(),name="editar-produto"), 
+   # path('editar/Produto/<int:pk>/',AtividadeUpdate.as_view(),name="editar-Produto"), 
     
     #=== LISTAR
-   # path('listar/pratos/>',CampoListView.as_view(),name="listar-pratos"),   
-    path('listar/pratos/',CampoListView.as_view(),name="listar-pratos"),
+   # path('listar/Produto/>',CampoListView.as_view(),name="listar-Produto"),   
+    path('listar/Produto/',ProdutoListView.as_view(),name="listar-Produto"),
     
     
-    path('excluir/pratos/<int:pk>/',PratosDelete.as_view(), name='excluir-pratos'),
+    path('excluir/Produto/<int:pk>/',ProdutoDelete.as_view(), name='excluir-Produto'),
 
     ]

@@ -38,11 +38,7 @@
                                 <span>Cardapio</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{% url 'pratos'%}" onclick="seleccionar()">
-                                <i class="fa-solid fa-utensils"></i>
-                                <span>Pratos</span>
-                            </a></li>
+                   
                         <li>
                             <a href="{% url 'perfil'%}" onclick="seleccionar()">
                                 <i class="fa-solid fa-pen"></i>
@@ -53,6 +49,13 @@
                             <a href="{% url 'login'%}" onclick="seleccionar()">
                                 <i class="fa-solid fa-comments"></i>
                                 <span>Login</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'carrinho'%}" onclick="seleccionar()">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>Carrinho</span>
                             </a>
                         </li>
                     
@@ -101,112 +104,6 @@
 
 
    
-
-    <!-- SECCION SABORES -->
-    <section id="sabores">
-        <h2>Sabores</h2>
-        <div class="fila">
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor1.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Saladas</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor2.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Doces</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor3.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Hamburguers, nossa especialidade da casa</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="fila">
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor4.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Sorvetes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor5.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Macarrões</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icono">
-                    <img src="{% static "img/sabor6.png" %}" alt="">
-                </div>
-                <div class="info">
-                    <h3>Biscoitos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-
-        <button>Ver Más</button>
-
-    </section>
-
-  
-
-    <!-- SECCION PLATOS -->
-    <section id="platos">
-        <h2>Pratos</h2>
-
-        <div class="fila">
-            <div class="item">
-                <img src="{% static "img/plato1.jpg" %} " alt="">
-                <p>Chiles Y Alitas De Pollo Frito En Un Plato</p>
-            </div>
-            <div class="item">
-                <img src="{% static "img/plato2.jpg" %}" alt="">
-                <p>Plato De Ensalada De Pescado</p>
-            </div>
-            <div class="item">
-                <img src="{% static "img/plato3.jpg" %}" alt="">
-                <p>Plato De Carne Asada Servido En Plato Blanco</p>
-            </div>
-        </div>
-        <div class="fila">
-            <div class="item">
-                <img src="{% static "img/plato4.jpg" %}" alt="">
-                <p>Plato de Bife a la Plancha con Papas Fritas</p>
-            </div>
-            <div class="item">
-                <img src="{% static "img/plato5.jpg" %}" alt="">
-                <p>Plato de Pizza con Rúcula</p>
-            </div>
-            <div class="item">
-                <img src="{% static "img/plato6.jpg" %}" alt="">
-                <p>Plato de Pastas con Tuco</p>
-            </div>
-        </div>
-
-        <button>Ver Mais</button>
-
-    </section>
 
    
 

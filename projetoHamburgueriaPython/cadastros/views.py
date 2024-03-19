@@ -1,26 +1,32 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import  ListView
 
-
 from django.shortcuts import render, redirect
-from .models import Produto, Carrinho
+from .models import Produtos, Carrinhos
 
-
-from .models import  Produto, Carrrinho
 from django.urls import reverse_lazy
 
 class ProdutoCreate(CreateView):
     
-    model=Produto
+    model=Produtos
     fields=['nome','preco', 'categoria']
     template_name='cadastros/form.html'
     success_url=reverse_lazy('index')
-  
+    
+    
+class CarrinhoCreate(CreateView):
+    model=Carrinhos
+    fields=['qtde','categoria', 'Preco','form','produto']
+    template_name='cadastros/form.html'
+    success_url=reverse_lazy('index')
+    
+    
+ 
 
 #===== Função de atualização Update
 
 class ProdutoUpdate(UpdateView):
-    model=Produto
+    model=Produtos
     fields=['nome','descricao', 'valor']
     template_name='cadastros/form.html'
     success_url=reverse_lazy('index')
@@ -28,13 +34,13 @@ class ProdutoUpdate(UpdateView):
 
 
 class ProdutoDelete(DeleteView):
-      model=Produto
+      model=Produtos
       template_name='cadastros/form_excluir.html'
       success_url=reverse_lazy('index')   
  
 
 class ProdutoListView(ListView):
-    model=Produto
+    model=Produtos
     template_name='cadastros/listar/campo.html'
 
 

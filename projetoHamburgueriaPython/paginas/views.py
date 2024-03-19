@@ -9,7 +9,7 @@ def home(request):
     
 
 def login(request):
-    return render(request, "paginas/login.html") 
+    return render(request, "usuarios/login.html") 
 
 
 def cardapio(request):
